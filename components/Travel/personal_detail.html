@@ -1,0 +1,46 @@
+<div class="container inner">
+    <form name="form" id="form">
+        <div class="form-group">
+            <label class="textColor">Enter First Name:</label>
+            <input type="text" name="name" ng-model="data.name" class="form-control"
+                   ng-pattern="/^[A-Za-z]+$/" placeholder="Enter First Name...." required>
+            <span ng-show="form.name.$error.pattern" class="err_msg">Enter only string.</span>
+        </div>
+
+        <div class="form-group">
+            <label class="textColor">Enter Last Name:</label>
+            <input type="text" name="lname" ng-model="data.lname" class="form-control"
+                   ng-pattern="/^[A-Za-z]+$/" placeholder="Enter Last Name...." required>
+            <span ng-show="form.lname.$error.pattern" class="err_msg">Enter only string.</span>
+        </div>
+
+        <div class="form-group">
+            <label class="textColor">Enter Email:</label>
+            <input type="email" name="email" ng-model="data.email" class="form-control"
+                   ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" placeholder="Enter Email ID...." required>
+            <span ng-show="form.email.$dirty && form.email.$error.email" class="err_msg">Enter a valid email</span>
+        </div>
+
+        <div class="form-group">
+            <label class="textColor">Enter Mobile No:</label>
+            <input type="text"
+                   name="number"
+                   ng-model="data.number"
+                   class="form-control"
+                   ng-maxlength="10"
+                   ng-minlength="10"
+                   ng-pattern="/^[0-9]+$/"
+                   placeholder="Enter Minimun 10 digit number...."
+                   required>
+            <span ng-show=" form.number.$error.maxlength || form.number.$error.minlength"
+                  class="err_msg">Enter Only 10 digit Number</span>
+        </div>
+
+        <button type="submit" ui-sref="home.step2" class="btn btn-default"
+                ng-disabled=" (data.name && data.lname && data.email && data.number) ?  false : true"
+                ng-click="onNextClick(data)">Next</button>
+    </form>
+</div>
+
+
+

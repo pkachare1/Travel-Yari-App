@@ -1,0 +1,33 @@
+{
+  "name": "ng-validation",
+  "version": "1.0.6",
+  "authors": [
+    "StarZou <tongyuanzou@gmail.com>"
+  ],
+  "description": "angular form validation",
+  "main": "./angular-validation.js",
+  "keywords": [
+    "ng-validation",
+    "ngValidation",
+    "angular",
+    "angularJs",
+    "form",
+    "validation",
+    "angular validation",
+    "validator"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/starzou/ng-validation",
+  "ignore": [
+    "**/.*",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "docs"
+  ],
+  "dependencies": {
+    "angular": "^1.3.1"
+  }
+}

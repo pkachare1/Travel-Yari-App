@@ -1,0 +1,21 @@
+<div class="container">
+    <img src="/components/Travel/Images/background.jpg" style="height:30%;width: 100%">
+    <marquee class="moving_text">Booking is Open Here!!!!!!!</marquee>
+</div>
+
+<div class="container">
+    <uib-tabset>
+        <uib-tab index="0" ui-sref-active="active" ui-sref=".step1" heading="Personal Detail" id="tab1"
+                 class="tab-disable">
+        </uib-tab>
+
+        <uib-tab index="1" ui-sref-active="active" ui-sref=".step2" heading="Booking" id="tab2" class="tab-disable">
+        </uib-tab>
+
+        <uib-tab index="2" ui-sref-active="active" ui-sref=".step3" heading="Information" id="tab3" class="tab-disable">
+        </uib-tab>
+
+    </uib-tabset>
+</div>
+
+<div ui-view></div>

@@ -1,0 +1,43 @@
+<div class="container inner">
+    <form name="form" id="form">
+    <label>Enter Location:</label>
+    <ui-select ng-model="data.selected" title="Choose a country">
+        <ui-select-match placeholder="Select or search a country in the list...">{{$select.selected.name}}
+        </ui-select-match>
+        <ui-select-choices repeat="country in cities | filter: $select.search">
+            <span ng-bind-html="country.name | highlight: $select.search"></span>
+            <small ng-bind-html="country.code | highlight: $select.search"></small>
+        </ui-select-choices>
+    </ui-select>
+    <span ng-show="selected.$error">Plz sect location</span>
+
+    <label>Enter Date Depart:</label>
+    <p class="input-group">
+        <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="data.datefrom"
+               is-open="flag" datepicker-options="dateOptions" ng-required="true" close-text="Close"
+               alt-input-formats="['M!/d!/yyyy']" placeholder="Enter Depart Date"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="flag = !flag"><i
+                    class="glyphicon glyphicon-calendar"></i></button>
+          </span>
+    </p>
+
+    <label>Enter Date Return:</label>
+    <p class="input-group">
+        <input type="text" class="form-control" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="data.dateto"
+               is-open="flag1" datepicker-options="dateOptions" ng-required="true" close-text="Close"
+               alt-input-formats="['M!/d!/yyyy']" placeholder="Enter Return Date" />
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="flag1 = !flag1"><i
+                    class="glyphicon glyphicon-calendar"></i></button>
+          </span></p>
+
+
+    <button type="button" class="btn btn-default next_button" ui-sref="home.step3"
+            ng-disabled=" (data.selected.name && data.datefrom && data.dateto) ?  false : true"
+            ng-click="onSubmit(data)">Next</button>
+    </form>
+</div>
+
+
+

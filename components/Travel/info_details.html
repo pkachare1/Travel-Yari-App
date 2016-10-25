@@ -1,0 +1,16 @@
+<div class="container inner info">
+    <form>
+    <span style="color:white">
+    <td>{{ info.name }}</td>
+    <td>{{ info.lname }}</td>
+    <td>{{ info.number }}</td><br> will depart for
+    <td>{{ info1.selected.name }}</td> on<br>
+    <td>{{ info1.datefrom |date:'MM/dd/yyyy'}}</td> And Return on <br>
+    <td>{{ info1.dateto |date:'MM/dd/yyyy'}}</td><br><br>
+    <button type="submit" class="btn btn-default" ng-click="sendingmail(data)">Confirm</button>
+    <button type="submit" class="btn btn-default" ui-sref="home.step1">change</button>
+    </span>
+    </form>
+</div>
+
+

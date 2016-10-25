@@ -1,0 +1,45 @@
+body{
+  background-color:#3995ba;
+}
+.moving_text{
+  color: #FFFFFF;
+  font-size: 20px;
+}
+.inner {
+  width: 45%;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 21px;
+}
+.nav>li>a {
+  position: relative;
+  display: block;
+  padding: 10px 87px;
+}
+.nav-tabs>li>a {
+  margin-right: 24px;
+}
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+label {
+  margin-top: 4px;
+}
+.tab-disable{
+  pointer-events: none;
+}
+.info{
+  font-size: 17px;
+  text-align: center;
+}
+.err_msg{
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+
+
+
