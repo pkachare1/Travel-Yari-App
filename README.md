@@ -1,2 +1,0 @@
-# Travel-Yari-App
-Booking
